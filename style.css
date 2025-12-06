@@ -1,0 +1,109 @@
+/* Базовые стили */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+
+  background: linear-gradient(90deg,rgba(255, 191, 191, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  background-size: 800% 800%;
+  /* Анимация смены */
+  animation: gradientShift 10s ease infinite;
+}
+
+/* Основной контейнер */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Заголовки */
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #27ae60; /* зелёный акцент */
+}
+
+/* Текст */
+p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Кнопка */
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #27ae60;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+a:hover {
+  background: #219150;
+}
+
+/* Контейнер пожеланий */
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Карточки */
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+
+
+/* Пожелание */
+.card p {
+  margin: 0;
+  font-size: 1em;
+  color: #555;
+}
+
+quote{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
